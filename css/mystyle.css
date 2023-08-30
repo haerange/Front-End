@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* 문자 인코딩(표현 방식) UTF-8 */
+/* 반드시 첫 줄에 와야 한다 */
+
+*{
+    font-family: 궁서체;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    background-color: yellow;
+    margin: 0;   /*바깥쪽 여백. 상하좌우 여백을 0 */
+    padding: 0;   /*안쪽 여백*/
+}
+
+.line {
+    border: 1px dotted gray;
+}
+
+#myLayer {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}

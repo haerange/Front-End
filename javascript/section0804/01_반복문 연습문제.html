@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>01_반복문 연습문제</title>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body> 
+
+        <h3>반복문 연습문제</h3>
+
+        <script>
+
+            //문1) 1~100 사이 중에서 짝수의 합, 홀수의 합을 각각 구하시오
+            //     짝수의 합 : 2550       홀수의 합 : 2500
+
+            //내가 푼 거
+            let jjak=0;
+            for(let a=2; a<=100; a=a+2){
+                jjak = jjak + a;
+            }
+            document.write("짝수의 합 : " + jjak );
+            document.write("<hr>");
+
+
+
+            let hol=0; 
+            for(let b=1; b<=100; b=b+2){
+                hol = hol + b;
+            }
+            document.write("홀수의 합 : " + hol );
+            document.write("<hr>");
+
+            //////////////////////////////////
+            //강사님이 푸신 거
+
+            let even=0; //짝수
+            let odd=0;
+
+            //1)
+            for(let a=1; a<=100; a=a+1) {
+                if(a%2==0) {
+                    even=even+a;
+                } else {
+                    odd=odd+a;
+                }
+            }
+            document.write("짝수의 합 : " + even);
+            document.write("<hr>");
+            document.write("홀수의 합 : " + odd );
+            document.write("<hr>");
+
+            //2)
+            let flag=false;
+            for(let a=1; a<=100; a=a+1) {
+                if(flag){
+                    // even=even+a; //빼도 됨
+                    flag=false;
+                } else {
+                    // odd=odd+a;   //빼도 됨
+                    flag=true;
+                }
+                
+            }
+            document.write("짝수의 합 : " + even);
+            document.write("<hr>");
+            document.write("홀수의 합 : " + odd );
+            document.write("<hr>");
+
+
+            //문2) 다음 식의 결과를 구하시오
+            //     1 - 2 + 3 - 4 + 5  ... - 100 = -50
+
+            /*
+            let jj=0;
+            for(let c=2; c<=100; c=c+2){
+                jj= "-" + c;
+            }
+            let hh=0;
+            for(let d=1; d<=100; d=d+2){
+                hh="+" + d;
+            }
+
+            document.write("결과 : " jj + hh);
+            document.write("<hr>");
+            */
+
+            let hap=0;
+            flag=false;
+            for(let a=1; a<=100; a=a+1){
+                if(flag){
+                    hap=hap-a;
+                    flag=false;
+                } else{
+                    hap=hap+a;
+                    flag=true;
+                }
+            }
+            document.write("1 - 2 + 3 - 4 + 5 ... -100= " + hap);
+            document.write("<hr>");
+        </script>
+
+
+    </body>
+</html>

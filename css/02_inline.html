@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>02_inline CSS</title>
+</head>
+
+<body>
+    <h3> 1) Inline CSS </h3>
+    <!-- style="속성:값; 속성:값; " -->
+
+    <div style="width: 200px; height: 150px; background-color: pink;"></div>
+    <div style="width: 100px; height:100px; background-color: paleturquoise; /*속성 한개 주석*/"></div>
+    <hr>
+    <div style="width: 100%; height: 100px; background-color: palegoldenrod;"></div>
+    <hr>
+    <div style="width: 50%; height:100px; background-color: plum;"></div>
+    <hr>
+
+    <!-- 참조 https://www.w3schools.com/css/css_background.asp -->
+    <!--background 배경 관련 스타일 -->
+
+    <div style="width: 300px; height: 300px; background-image: url(../images/angel.png);
+                     background-repeat: no-repeat; background-position: right bottom;
+                     background-size: 20% 20%; /*가로 세로*/"></div>
+    <hr>
+
+    <!-- 참조 https://www.w3schools.com/css/css_text.asp -->
+    <!-- 텍스트 관련 스타일-->
+    <div style="width: 300px; 
+                height: 300px; 
+                background-color: aquamarine; 
+                color: blue;                   /*글자 색*/
+                text-decoration: underline;      /*밑줄*/
+                text-indent: 50px;               /*들여쓰기*/
+                text-shadow: 3px 2px orange;   /*그림자 수평 수직 색상*/
+                letter-spacing: -3px;            /*글자 간격*/  
+                line-height: 20px;               /*줄 간격*/  
+                word-spacing: 10px;              /*단어 간격*/ ">
+        정부가 추진중인 '메타버스 노마드 사업'이 지자체의 관심을 끌지 못하면서 참여가 저조한 것으로 나타났다. 메타버스 산업에 대한 국민 접점을 확대하겠다는 'K-메타버스' 전략이 시작부터 좌초 위기에
+        놓였다. 업계 관계자는 "글로벌 경기 침체와 이용자들의 관심 하락으로 메타버스 시장에 대한 불확실성이 높아지고 있다"며 "메타플랫폼(옛 페이스북), 마이크로소프트(MS) 등 글로벌 빅테크 기업들도 해당
+        사업의 투자 및 사업 전략 수정에 들어간 상황"이라고 말했다.
+        전문가들 역시 최근 챗GPT가 촉발한 생성형 인공지능(AI)이 새로운 게임체인저로 부상하면서 메타버스의 성장 가능성을 낙관하기 어렵다고 진단한다. 세계적인 기술 트렌드의 변화를 반영한 정부 정책이
+        반영돼야 한다는 얘기다.
+    </div>
+
+    <hr>
+    <textarea cols="30" rows="10" 
+        style="background-image: url(../images/coffee.png);
+                background-repeat: no-repeat; 
+                background-position: right bottom;
+                background-size: 30% 30%;"></textarea>
+</body>
+
+</html>
