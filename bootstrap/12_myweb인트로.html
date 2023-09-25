@@ -11,64 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- layout.css import -->
   <link rel="stylesheet" href="layout.css">
-  <script>
-
-    function showtime() {
-
-        const d = new Date(); //시스템의 현재 날짜 정보 가져오기 (년월일시분초)
-
-        let today = "";  //결과값
-        today += d.getFullYear() + ".";  //2023
-
-        if (d.getMonth() + 1 < 10) {
-            today += "0";
-        }
-        today += d.getMonth() + 1 + ".";
-
-        if (d.getDate() < 10) {
-            today += "0";
-        }
-        today += d.getDate();
-
-        switch (d.getDay()) {
-            case 0: today += " (일) "; break;
-            case 1: today += " (월) "; break;
-            case 2: today += " (화) "; break;
-            case 3: today += " (수) "; break;
-            case 4: today += " (목) "; break;
-            case 5: today += " (금) "; break;
-            case 6: today += " (토) "; break;
-        }
-
-        if (d.getHours() < 12) {
-            today += " AM ";
-        } else {
-            today += " PM ";
-        }
-
-        if (d.getHours() < 13) {
-            today += d.getHours() + ":";
-        } else {
-            today += d.getHours() - 12 + ":";   //2023.08.08 (화) PM 2:
-        }
-
-        if (d.getMinutes() < 10) {
-            today += "0";
-        }
-        today += d.getMinutes() + ":";        //2023.08.08 (화) PM 2:03
-
-        if (d.getSeconds() < 10) {
-            today += "0";
-        }
-        today += d.getSeconds();              //2023.08.08 (화) PM 2:03:18
-
-        document.getElementById("clock").innerText = today;
-
-        //1초 후에 showtime 함수를 호출
-        timer = setTimeout(showtime, 1000);
-
-    }//showtime()end
-    </script>
+  
 </head>
 <body>
 
@@ -107,8 +50,70 @@
     <div class="row">  <!-- 한 줄 추가 -->
         <div class="col-xs-12">
             <!-- 본문 시작 -->
-            여기에 본문 내용 작성합니다
-            <input type="button" value="시작" onclick="showtime()">
+            
+            <h3>현재 시간</h3>
+            <h1 id="clock"></h1>
+          
+            <script>
+              showtime();
+
+              function showtime() {
+          
+                  const d = new Date(); //시스템의 현재 날짜 정보 가져오기 (년월일시분초)
+          
+                  let today = "";  //결과값
+                  today += d.getFullYear() + ".";  //2023
+          
+                  if (d.getMonth() + 1 < 10) {
+                      today += "0";
+                  }
+                  today += d.getMonth() + 1 + ".";
+          
+                  if (d.getDate() < 10) {
+                      today += "0";
+                  }
+                  today += d.getDate();
+          
+                  switch (d.getDay()) {
+                      case 0: today += " (일) "; break;
+                      case 1: today += " (월) "; break;
+                      case 2: today += " (화) "; break;
+                      case 3: today += " (수) "; break;
+                      case 4: today += " (목) "; break;
+                      case 5: today += " (금) "; break;
+                      case 6: today += " (토) "; break;
+                  }
+          
+                  if (d.getHours() < 12) {
+                      today += " AM ";
+                  } else {
+                      today += " PM ";
+                  }
+          
+                  if (d.getHours() < 13) {
+                      today += d.getHours() + ":";
+                  } else {
+                      today += d.getHours() - 12 + ":";   //2023.08.08 (화) PM 2:
+                  }
+          
+                  if (d.getMinutes() < 10) {
+                      today += "0";
+                  }
+                  today += d.getMinutes() + ":";        //2023.08.08 (화) PM 2:03
+          
+                  if (d.getSeconds() < 10) {
+                      today += "0";
+                  }
+                  today += d.getSeconds();              //2023.08.08 (화) PM 2:03:18
+          
+                  document.getElementById("clock").innerText = today;
+          
+                  //1초 후에 showtime 함수를 호출
+                  timer = setTimeout(showtime, 1000);
+          
+              }//showtime()end
+              </script>
+              
             <!-- 본문 끝 -->
         </div> <!-- col-xs-12 끝 -->
     </div><!-- row 끝 -->
