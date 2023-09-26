@@ -1,0 +1,6 @@
+[
+  {"name":"지수", "id":"black",  "kor":90, "eng":60, "mat":60}
+  ,{"name":"제니", "id":"pink",   "kor":80, "eng":90, "mat":40}
+  ,{"name":"로제", "id":"inyour", "kor":70, "eng":85, "mat":50}
+  ,{"name":"리사", "id":"area",   "kor":60, "eng":95, "mat":30}
+]
